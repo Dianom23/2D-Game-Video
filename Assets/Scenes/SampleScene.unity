@@ -423,6 +423,7 @@ GameObject:
   - component: {fileID: 886317730}
   - component: {fileID: 886317729}
   - component: {fileID: 886317733}
+  - component: {fileID: 886317734}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -571,6 +572,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eab8d03afb8f594ab79e16aea8cac70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 3
+  _moveInput: 0
+  _jumpForce: 6
+  _isGrounded: 0
+--- !u!70 &886317734
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886317728}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.5}
+  m_Size: {x: 0.43, y: 0.03}
+  m_Direction: 1
 --- !u!1 &1202993312
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,7 +711,7 @@ GameObject:
   - component: {fileID: 1347500411}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3072,7 +3112,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: -1462346471, guid: 53e6611179a7e374fbb1a7d6c753b414, type: 3}
       - {fileID: 2060212734, guid: 53e6611179a7e374fbb1a7d6c753b414, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 18, y: 0, z: 0}
