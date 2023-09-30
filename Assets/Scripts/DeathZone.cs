@@ -9,7 +9,13 @@ public class DeathZone : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(0);
+            Destroy(collision.gameObject);
+            Invoke("LoadScene", 2);
         }
+    }
+
+    private void LoadScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }
