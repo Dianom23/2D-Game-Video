@@ -1,12 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class Wallet : MonoBehaviour
 {
     public int count;
     [SerializeField] private TextMeshProUGUI _text;
+
+    private void Start()
+    {
+        _text = FindObjectOfType<TextMeshProUGUI>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
